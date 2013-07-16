@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<title>中医临床登录</title>
+<LINK href="script/table.css" rel="stylesheet" type="text/css">
+<link href="common.css" rel="stylesheet" type="text/css">
+<script language="JavaScript">
+<!--
+	function Validate()
+	{
+		if (document.forms("formCont").txtName.value=="" || document.forms("formCont").txtPwd.value=="")
+		{
+			alert("请输入用户名和密码");
+			return false;
+		}
+		else
+			return true;
+	}
+	
+	function ManageOnclick()
+	{
+		if(Validate())
+		{
+			document.forms("formCont").Type.value="1";
+			formCont.submit();
+		}
+	}
+	
+	function OKOnclick()
+	{
+		if(Validate())
+		{
+			document.forms("formCont").Type.value="0";
+			formCont.submit();
+		}
+	}
+//-->
+</script>
+</head>
+
+<body class="body">
+<form name="formCont" action="validate.asp" method="post">
+<center>
+	<table width="250" align="center" class="table1">
+        <tr> 
+          <td height="22" colspan=2 class="title1">用户登录</td>
+        </tr>
+        <tr> 
+          <td width="30%" height="24" align="right">用户名：</td>
+          <td width="70%"><input type="text" name="txtName"></td>
+        </tr>
+        <tr> 
+          <td height="20" align="right">密码：</td>
+          <td><input type="password" name="txtPwd"></td>
+        </tr>
+        <tr> 
+          
+        <td height="28" colspan=2 align="center"> 
+          <input type="button" name="Online" value="在线" class="button1" onClick='window.open("online.asp","online","width=160,height=400,left=20,top=100,toolbar=no,scrollbars=yes");'>
+          <input type="button" name="Manage" value="管理" class="button1" onClick="return ManageOnclick()"> 
+          <input type="button" name="OK" value="确定" class="button1" onClick="return OKOnclick()"> 
+            <input type="reset" name="Cancel" value="取消" class="button1">
+			<input type="hidden" name="Type">
+		  </td>
+        </tr>
+      </table>
+</center>
+</form>
+</body>
+</html>

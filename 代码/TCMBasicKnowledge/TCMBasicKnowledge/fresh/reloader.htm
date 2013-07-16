@@ -1,0 +1,73 @@
+<html>
+<head>
+<style>
+input { font-size:9pt; background-color:#fef4d9; border:0pt none black; color:blue; text-align:center }
+</style>
+<script language="JavaScript">
+<!--
+var intSecond,intMinute,intHour,intDay;
+
+intSecond=0;
+intMinute=0;
+intHour=0;
+intDay=0;
+
+function tick()
+{
+	intSecond++;
+	
+	if (intSecond>60)
+	{
+		intSecond=intSecond%60;
+		intMinute++;
+	}
+	
+	if (intMinute>60)
+	{
+		intMinute=intMinute%60;
+		intHour++;
+	}
+
+	if (intHour>24)
+	{
+		intHour=intHour%24;
+		intDay++;
+	}
+	
+	document.timer.clock.value=" "+intDay+" 天 "+intHour+" 小时 "+intMinute+" 分 "+intSecond+" 秒 ";
+	setTimeout("tick()",1000);
+}
+
+var intDelay=10; //单位：分钟
+var intCount=0;
+
+function reload()
+{
+	intCount++
+	this.parent.dummy.location="dummy.asp";
+	document.timer.message.value="已经连接服务器"+intCount+"次"
+	setTimeout("reload()",1000*60*intDelay); //十分钟连接一次
+}
+
+function autostart()
+{
+	tick();
+	reload();
+}
+-->
+</script>
+</head>
+<body bgcolor="#fef4d9" onLoad="autostart();">
+<form name="timer">
+<table width="100%">
+<tr>
+<td align="center">
+<font style="font-size:9pt">您在此停留了</font><br>
+<input type=text size=30 name="clock" value="在线时间"><br>
+<input type=text size=30 name="message" value="已经连接服务器0次"><br>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

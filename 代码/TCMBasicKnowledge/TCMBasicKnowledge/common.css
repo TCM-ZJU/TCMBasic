@@ -1,0 +1,41 @@
+.body {
+	background-image: url(image/bg_home.gif);
+}
+.table1 {
+	font-family: "宋体";
+	font-size: 16px;
+	font-style: normal;
+	border: thin solid #000000;
+}
+.button1 {
+	font-family: "宋体";
+	font-size: 12px;
+	border: 1px solid #336699;
+	padding-top: 5px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	margin: 1px;
+
+
+
+
+}
+.table2 {
+	border: thin inset #6699CC;
+	font-family: "宋体";
+	font-size: 16px;
+
+}
+.table3 {
+	font-family: "宋体";
+	font-size: 16px;
+}
+.title1 {
+	font-family: "宋体";
+	font-size: 16px;
+	font-style: normal;
+	color: #FFFFFF;
+	background-color: #333333;
+	font-weight: bold;
+}

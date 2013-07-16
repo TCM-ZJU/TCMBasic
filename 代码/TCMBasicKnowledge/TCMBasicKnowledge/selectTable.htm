@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>录入内容选择</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="common.css" rel="stylesheet" type="text/css">
+<script language="JavaScript">
+<!--
+	function Addtheory()
+	{
+		formTheory.submit();
+	}
+	function Addanatomy()
+	{
+		formAnatomy.submit();
+	}
+	function Addpoint()
+	{
+		formPoint.submit();
+	}
+	function Addeffect()
+	{
+		formEffect.submit();
+	}
+	function Addsickness()
+	{
+		formSickness.submit();
+	}
+	function Addpathogeny()
+	{
+		formPathogeny.submit();
+	}
+	function Addtreatment()
+	{
+		formTreatment.submit();
+	}
+	function AdddgsStd()
+	{
+		formDgsStd.submit();
+	}
+	function Adddiagnosis()
+	{
+		formDiagnosis.submit();
+	}
+
+	function Checktheory()
+	{
+		document.forms("formCheck").TabNum.value=0;
+		formCheck.submit();
+	}
+	function Checkanatomy()
+	{
+		document.forms("formCheck").TabNum.value=1;
+		formCheck.submit();
+	}
+	function Checkpoint()
+	{
+		document.forms("formCheck").TabNum.value=2;
+		formCheck.submit();
+	}
+	function Checkeffect()
+	{
+		document.forms("formCheck").TabNum.value=3;
+		formCheck.submit();
+	}
+	function Checksickness()
+	{
+		document.forms("formCheck").TabNum.value=4;
+		formCheck.submit();
+	}
+	function Checkpathogeny()
+	{
+		document.forms("formCheck").TabNum.value=5;
+		formCheck.submit();
+	}
+	function Checktreatment()
+	{
+		document.forms("formCheck").TabNum.value=6;
+		formCheck.submit();
+	}
+	function CheckdgsStd()
+	{
+		document.forms("formCheck").TabNum.value=7;
+		formCheck.submit();
+	}
+	function Checkdiagnoses()
+	{
+		document.forms("formCheck").TabNum.value=8;
+		formCheck.submit();
+	}
+//-->
+</script>
+</head>
+
+<body class="body">
+<center>
+	<table width="800" border="0" align="center" class="table2">
+        <tr> 
+          <td colspan="3" class="title1">选择基础库表单</td>
+        </tr>
+        <tr> 
+          <td width="18%"><input name="Atheory" type="button" class="button1" value="录入" onClick="return Addtheory()">
+        <input name="Ctheory" type="button" class="button1" value="审校" onClick="return Checktheory()">
+        ——</td>
+          <td width="53%">中医基础理论</td>
+          <td width="29%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td><input name="Aanatomy" type="button" class="button1" value="录入" onClick="return Addanatomy()"> 
+            <input name="Canatomy" type="button" class="button1" value="审校" onClick="return Checkanatomy()">
+        ——</td>
+      	  <td>解剖</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td><input name="Apoint" type="button" class="button1" value="录入" onClick="return Addpoint()"> 
+            <input name="Cpoint" type="button" class="button1" value="审校" onClick="return Checkpoint()">
+        ——</td>
+          <td>国家经络穴位标准</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td><input name="Aeffect" type="button" class="button1" value="录入" onClick="return Addeffect()"> 
+            <input name="Ceffect" type="button" class="button1" value="审校" onClick="return Checkeffect()">
+        ——</td>
+          <td>疗效</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td><input name="Asickness" type="button" class="button1" value="录入" onClick="return Addsickness()"> 
+            <input name="Csickness" type="button" class="button1" value="审校" onClick="return Checksickness()">
+        ——</td>
+          <td>疾病、证候、症状</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td><input name="Apathogeny" type="button" class="button1" value="录入" onClick="return Addpathogeny()"> 
+            <input name="Cpathogeny" type="button" class="button1" value="审校" onClick="return Checkpathogeny()">
+        ——</td>
+          <td>病因病机</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td><input name="Atreatment" type="button" class="button1" value="录入" onClick="return Addtreatment()"> 
+            <input name="Ctreatment" type="button" class="button1" value="审校" onClick="return Checktreatment()">
+        ——</td>
+          <td>治疗方法</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td><input name="AdgsStd" type="button" class="button1" value="录入" onClick="return AdddgsStd()"> 
+            <input name="CdgsStd" type="button" class="button1" value="审校" onClick="return CheckdgsStd()">
+        ——</td>
+          <td>诊断标准</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td><input name="Adiagnosis" type="button" class="button1" value="录入" onClick="return Adddiagnosis()"> 
+            <input name="Cdiagnosis" type="button" class="button1" value="审校" onClick="return Checkdiagnoses()">
+        —— </td>
+          <td>诊断方法</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+<form name="formTheory" action="tab_theory.asp?IsNew=1" method="post"></form>
+<form name="formAnatomy" action="tab_anatomy.asp?IsNew=1" method="post"></form>
+<form name="formPoint" action="tab_point.asp?IsNew=1" method="post"></form>
+<form name="formEffect" action="tab_effect.asp?IsNew=1" method="post"></form>
+<form name="formSickness" action="tab_sickness.asp?IsNew=1" method="post"></form>
+<form name="formPathogeny" action="tab_pathogeny.asp?IsNew=1" method="post"></form>
+<form name="formTreatment" action="tab_treatment.asp?IsNew=1" method="post"></form>
+<form name="formDgsStd" action="tab_dgsStd.asp?IsNew=1" method="post"></form>
+<form name="formDiagnosis" action="tab_diagnosis.asp?IsNew=1" method="post"></form>
+
+<form name="formCheck" action="selectSub.asp" method="post">
+<input type="hidden" name="TabNum">
+</form>
+</center>
+<hr border="2" color="#6699CC">
+<CENTER><BR><FONT size=2>TCM Online Co. Ltd.</FONT>
+<SCRIPT language=JavaScript src="fresh/connect.js"></SCRIPT>
+<SCRIPT language=JavaScript>
+	createConnect("connectForBotany");
+</SCRIPT>	  
+</body>
+</html>

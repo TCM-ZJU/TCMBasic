@@ -1,0 +1,6 @@
+input { border: 1 double black }
+textarea {width:250; height:50; border:1 double black }
+.hide { visibility:hidden; border: 1px double blue  }
+.title {text-align:right; width:20%; border: 1px double blue }
+.box {text-align:left; width:30%; border: 1px double blue }
+.itable { background-color:#E5F0FF; border-collapse: collapse; border: 1px double blue }

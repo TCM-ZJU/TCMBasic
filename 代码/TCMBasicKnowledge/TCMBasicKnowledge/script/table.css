@@ -1,0 +1,8 @@
+textarea { width:250; height:50; border: 1 double black }
+input { border: 1 double black }
+.none { border: 1 none white }
+.hide { visibility:hidden; border-collapse: collapse; border: 1px double green }
+.title { text-align:right; width:20%; border-collapse: collapse; border: 1px double green }
+.box { text-align:left; width:30%; border-collapse: collapse; border: 1px double green }
+.itd { border-collapse: collapse; border: 1px double green }
+.itable { background-color:f4faed; border-collapse: collapse; border: 1px double green }

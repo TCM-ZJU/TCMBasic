@@ -1,0 +1,37 @@
+<OBJECT RUNAT=Server SCOPE=Application ID=OraSession PROGID="OracleInProcServer.XOraSession"></OBJECT>
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+
+'You can add special event handlers in this file that will get run automatically when
+'special Active Server Pages events occur. To create these handlers, just create a
+'subroutine with a name from the list below that corresponds to the event you want to
+'use. For example, to create an event handler for Session_OnStart, you would put the
+'following code into this file (without the comments):
+
+'EventName              Description
+
+'Session_OnStart        Runs the first time a user runs any page in your application
+
+'Session_OnEnd          Runs when a user's session times out or quits your application
+sub Session_OnEnd
+	dim strSQL
+	strSQL=" Update Cuser set Locked=0 where Cuser='" & Session("UserAccount") &"'"
+	dim OraDatabase
+	set OraDatabase = OraSession.getDatabaseFromPool(10)
+	OraDatabase.ExecuteSQL(strSQL)
+end sub
+
+'Application_OnStart    Runs once when the first page of your application is run for the first time by any user
+sub Application_OnStart
+	rem 这个数据库放了元信息表，因此一直保持连接
+	
+	rem 注意  CACHEDATABASE 这里是大写的帐号，因为在查找字典对象中，要区分大小写的 －－－－－－－－－－邓
+	rem 如：  select COLUMN_NAME ,COMMENTS from all_Col_comments where OWNER='CACHEDATABASE' 必须是大写CACHEDATABASE
+	
+	Application("DatabaseAccount")="TCM_BASIC" 
+	Application("Passwd")="BASIC"
+	
+	OraSession.CreateDatabasePool 10,1000,60,"sun3500",Application("DatabaseAccount")&"/"& Application("Passwd"),1
+end sub
+
+'Application_OnEnd      Runs once when the web server shuts down
+</SCRIPT>
